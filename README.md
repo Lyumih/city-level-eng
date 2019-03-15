@@ -1,5 +1,6 @@
 # city-level-eng
 Пробная работа взглянуть по-новому на обучение английскому. 
+Пример работы в файле: https://docs.google.com/document/d/1gl-fKVgefFfagpmIa9ssy4Xqp-31ud4yKj8LBzFa4UA/edit?usp=sharing
 
 
 # Уровни
