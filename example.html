@@ -30,7 +30,9 @@
 
   <div class="container">
     <header class="row my-5">
-      <h1 class="col text-center">Система изучения английского языка через уровни</h1>
+      <h1 class="col-12 text-center">Система изучения английского языка через уровни</h1>
+      <p class="my-2">О проектe:<a class="col-12" href="https://github.com/Lyumih/city-level-eng">https://github.com/Lyumih/city-level-eng</a>
+      </p>
     </header>
 
 
@@ -69,11 +71,11 @@
     </main>
 
     <div class="row my-2">
-      <div class="col-6">
+      <div class="col-6 d-none">
         <button class="btn btn-primary">Фильтры</button>
       </div>
-      <div class="col-6">
-        <button onclick="nextExample();" class="btn btn-primary">Следующий пример</button>
+      <div class="col">
+        <button onclick="nextExample();" class="btn btn-primary btn-block">Следующий пример</button>
       </div>
     </div>
 
@@ -90,14 +92,23 @@
   <script>
     let example = 0
     let MAX_EXAMPLE = 2
+
     let lvl0Contents = [
-      '<span class="lvl1-in lvl2-in">I</span> <span class="lvl1-in lvl2-in">am</span> <span>Sasha</span>',
-      'What\'s your name?'
+      '<span class="lvl1-in lvl2-in">I</span> <span class="lvl1-in lvl2-in">am Sasha.',
+      '<span class="lvl1-in lvl2-in">What\'s</span> your name?'
     ]
-    let lvl1Contents = ["I + am", "What's"]
+    let lvl1Contents = ["I + am", "What is"]
     let lvl1Rules = ["+ Present Simple: V/Vs", "? Present Simple: V/Vs"]
     let lvl2Contents = ["I'm = I am", "What's = What is"]
     let lvl2Rules = ["am/is/are", "am/is/are"]
+
+
+    init()
+
+    function init() {
+      example = MAX_EXAMPLE
+      nextExample()
+    }
 
     function nextExample() {
       console.log('Получить следующий пример')
@@ -108,6 +119,7 @@
       console.log(example)
       printExample(example)
     }
+
 
     function printExample(example) {
       console.log('Показать пример', example)
