@@ -90,10 +90,14 @@
   <script>
     let example = 0
     let MAX_EXAMPLE = 2
-    let lvl0Conents = []
-    let lvl1Rules = []
-    let lvl1Contents = []
-    let lvl2Rules = []
+    let lvl0Contents = [
+      '<span class="lvl1-in lvl2-in">I</span> <span class="lvl1-in lvl2-in">am</span> <span>Sasha</span>',
+      'What\'s your name?'
+    ]
+    let lvl1Contents = ["I + am", "What's"]
+    let lvl1Rules = ["+ Present Simple: V/Vs", "? Present Simple: V/Vs"]
+    let lvl2Contents = ["I'm = I am", "What's = What is"]
+    let lvl2Rules = ["am/is/are", "am/is/are"]
 
     function nextExample() {
       console.log('Получить следующий пример')
@@ -107,7 +111,13 @@
 
     function printExample(example) {
       console.log('Показать пример', example)
-      document.querySelector('.')
+      $('.lvl0 > .content').html(lvl0Contents[example])
+      $('.lvl1 > .content').text(lvl1Contents[example])
+      $('.lvl2 > .content').text(lvl2Contents[example])
+
+
+      $('.lvl1 > .rule').text(lvl1Rules[example])
+      $('.lvl2 > .rule').text(lvl2Rules[example])
     }
   </script>
 </body>
